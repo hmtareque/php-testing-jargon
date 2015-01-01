@@ -1,0 +1,22 @@
+{
+    "name": "hasan/php-testing-jargon",
+    "authors": [
+        {
+            "name": "Hasan Tareque",
+            "email": "hmtareque@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit" : "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    }
+}
