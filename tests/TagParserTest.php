@@ -27,5 +27,10 @@ class TagParserTest extends TestCase
 
         $this->assertSame($expected, $result);
 
+        $result = $parser->parse("personal,family,money");
+        $expected = ['personal', 'family', 'money'];
+
+        $this->assertSame($expected, $result);
+
     }
 }
