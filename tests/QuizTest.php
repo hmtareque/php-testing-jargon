@@ -29,4 +29,17 @@ class QuizTest extends TestCase
 
         $this->assertEquals(100, $quiz->grade());
     }
+
+    public function test_it_can_be_failed_graded()
+    {
+        $quiz = new Quiz();
+
+        $quiz->addQuestion(new Question("what is 2+2?", 4));
+
+        $question = $quiz->nextQuestion();
+
+        $question->answer(4);
+
+        $this->assertEquals(100, $quiz->grade());
+    }
 }

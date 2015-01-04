@@ -22,7 +22,13 @@ class Quiz {
 
     public function grade()
     {
-        return 100;
+        $correct = array_filter($this->questions, function($question){
+            return $this->isCorrect();
+        });
+
+        $total = count($this->questions());
+
+        return ($correct/$total)*100;
     }
     
 }
