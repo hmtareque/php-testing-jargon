@@ -1,0 +1,17 @@
+<?php
+namespace Tests;
+
+use PHPUnit\Framework\TestCase;
+
+class QuizTest extends TestCase
+{
+    public function it_consists_of_questions()
+    {
+        $quiz = new Quiz();
+
+        $quiz->addQuestion(new Question("what is 2+2?", 4));
+
+        $this->assertCount(1, $quiz->questions());
+
+    }
+}
