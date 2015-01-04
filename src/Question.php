@@ -3,7 +3,8 @@ namespace App;
 
 class Question 
 {
-    public function __construct(){
-        
+    public function answer($answer)
+    {
+
     }
 }
