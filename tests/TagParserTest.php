@@ -25,7 +25,10 @@ class TagParserTest extends TestCase
     public function tagsProvider()
     {
         return [
-            ['personal', ['personal']]
+            ['personal', ['personal']],
+            ['personal,money,family', ['personal', 'money', 'family']],
+            ['personal | money | family', ['personal', 'money', 'family']],
+
         ];
     }
 
