@@ -30,7 +30,7 @@ class QuizTest extends TestCase
         $this->assertEquals(100, $quiz->grade());
     }
 
-    public function test_it_can_be_failed_graded()
+    public function test_it_can_be_failed_quiz()
     {
         $quiz = new Quiz();
 
@@ -38,8 +38,8 @@ class QuizTest extends TestCase
 
         $question = $quiz->nextQuestion();
 
-        $question->answer(4);
+        $question->answer("incorrect answer");
 
-        $this->assertEquals(100, $quiz->grade());
+        $this->assertEquals(0, $quiz->grade());
     }
 }
