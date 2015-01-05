@@ -19,4 +19,9 @@ class Question
     {
 
     }
+
+    public function isCorrect()
+    {
+        
+    }
 }
