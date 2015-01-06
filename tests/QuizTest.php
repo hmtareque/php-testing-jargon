@@ -42,4 +42,22 @@ class QuizTest extends TestCase
 
         $this->assertEquals(0, $quiz->grade());
     }
+
+    public function test_it_correctly_tracks_the_next_question()
+    {
+        $quiz = new Quiz();
+
+        $quiz->addQuestion($question1 = new Question("what is 2+2?", 4));
+        $quiz->addQuestion($question2 = new Question("what is 2+4?", 6));
+        
+
+        $this->assertEquals($question1, $quiz->nextQuestion());
+        $this->assertEquals($question2, $quiz->nextQuestion());
+        
+    }
+
+    public function test_it_cannot_be_graded_until_all_answered()
+    {
+        
+    }
 }
