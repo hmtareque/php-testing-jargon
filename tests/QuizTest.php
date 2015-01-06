@@ -55,9 +55,4 @@ class QuizTest extends TestCase
         $this->assertEquals($question2, $quiz->nextQuestion());
         
     }
-
-    public function test_it_cannot_be_graded_until_all_answered()
-    {
-        
-    }
 }
